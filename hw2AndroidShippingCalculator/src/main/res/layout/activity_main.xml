@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    // Shipping weight input
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_shipping_weight"/>
+
+        <EditText
+            android:id="@+id/input_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_shipping_weight"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    // Buttons
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radio_next_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_next_day" />
+
+            <RadioButton
+                android:id="@+id/radio_second_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_second_day" />
+
+            <RadioButton
+                android:id="@+id/radio_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_standard" />
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkbox_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_insurance" />
+
+    </LinearLayout>
+
+    // Cost calculation
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/label_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/label_cost"
+            android:paddingRight="5sp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/shippingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button_calculate_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/button_calculate_cost"
+            android:onClick="onClickCalculateCost" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
